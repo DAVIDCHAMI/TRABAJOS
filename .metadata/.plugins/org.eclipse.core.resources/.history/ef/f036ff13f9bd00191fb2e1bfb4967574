@@ -1,0 +1,21 @@
+package practicaCompra.questions;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.Tasks;
+
+public class CompraRealizada{
+	
+	public String Question<String>(Actor actor) {
+		
+		return actor -> 
+	}
+
+	public static Question<String> value() {
+		
+		return  new CompraRealizada();
+	}
+	
+	
+
+}

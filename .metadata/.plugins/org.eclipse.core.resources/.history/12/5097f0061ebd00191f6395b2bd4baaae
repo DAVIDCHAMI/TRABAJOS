@@ -1,0 +1,44 @@
+package practica.stepdefinitions;
+
+import org.openqa.selenium.WebDriver;
+
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import net.thucydides.core.annotations.Managed;
+import practicaCompra.tasks.OpenTheBrowser;
+
+public class RealizarCompraDeUnProductoStepDefinitions {
+	
+	@Managed(driver= "chrome")
+	private WebDriver hisBrowser;
+	
+	private Actor david = Actor.named("David");
+	
+	@Before
+	public void setUp() {
+		david.can(BrowseTheWeb.with(hisBrowser));
+	}
+	
+	@Given("^david logged en app whith (.*) and (.*)$")
+	public void davidLoggedEnAppWhithAnd(String user, String pass) throws Exception {
+		david.wasAbleTo(OpenTheBrowser.on);
+	  
+	}
+
+
+	@When("^makes a buy$")
+	public void makesABuy() throws Exception {
+	   
+	}
+
+	@Then("^david see the purchase done\\.$")
+	public void davidSeeThePurchaseDone() throws Exception {
+	   
+	}
+
+
+}

@@ -1,0 +1,35 @@
+package practicaCompra.tasks;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Performable;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.selectactions.SelectByIndexFromTarget;
+import practicaCompra.userInterfaces.PaginaPrincipalPage;
+
+import static  net.serenitybdd.screenplay.Tasks.instrumented;
+
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.MoveMouseAction;
+
+import com.opera.core.systems.scope.protos.ExecProtos.ActionList.Action;
+
+public class MakesBuy implements Task{
+	
+
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(Click.on(PaginaPrincipalPage.BTN_WOMEN));	
+		
+		
+		actor.attemptsTo();
+	}
+
+	public static MakesBuy producto() {
+		return instrumented(MakesBuy.class);
+	}
+	
+	
+	
+
+}

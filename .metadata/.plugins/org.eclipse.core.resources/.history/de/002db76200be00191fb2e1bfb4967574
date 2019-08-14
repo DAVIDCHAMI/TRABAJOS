@@ -1,0 +1,19 @@
+package practicaCompra.questions;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Question;
+
+public class CompraRealizada implements Question<String>{
+
+	@Override
+	public String answeredBy(Actor actor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static Object value() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

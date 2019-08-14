@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PracticaRunner" project="practica_screenplay" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="practica.runners.PracticaRunner" time="2.692">
+    <testsuite name="Feature: Buy a product" time="2.692">
+      <testcase name="asks for a receipt" classname="Buy a product" time="2.692">
+        <skipped>cucumber.runtime.junit.UndefinedThrowable: The step "david makes buy the:" is undefined&#13;
+&#13;
+</skipped>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

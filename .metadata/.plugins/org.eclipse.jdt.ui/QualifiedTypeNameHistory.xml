@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.Action"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.actions.selectactions.SelectByIndexFromTarget"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.interactions.Action"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.remote.server.handler.interactions.touch.Move"/>
+<fullyQualifiedTypeName name="org.apache.tools.ant.taskdefs.Move"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.interactions.touch.MoveAction"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.interactions.MoveMouseAction"/>
+<fullyQualifiedTypeName name="org.apache.pdfbox.contentstream.operator.graphics.MoveTo"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.questions.JavaScript"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.questions.JavaScript.JavaScriptBuilder"/>
+<fullyQualifiedTypeName name="com.gargoylesoftware.htmlunit.javascript.configuration.JavaScriptConfiguration"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.interactions.Actions"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.JavascriptExecutor"/>
+<fullyQualifiedTypeName name="practica.stepdefinitions.RealizarCompraDeUnProductoStepDefinitions"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+<fullyQualifiedTypeName name="net.serenitybdd.core.annotations.findby.FindBy"/>
+<fullyQualifiedTypeName name="net.serenitybdd.core.pages.WebElementFacade"/>
+<fullyQualifiedTypeName name="practicaCompra.tasks.MakesBuy"/>
+<fullyQualifiedTypeName name="practicaCompra.userInterfaces.PaginaPrincipalPage"/>
+<fullyQualifiedTypeName name="practicaCompra.tasks.Confirm"/>
+<fullyQualifiedTypeName name="net.serenitybdd.core.pages.PageObject"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.targets.Target"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="practicaCompra.tasks.Payment"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.actions.Click"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.Tasks"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.Actor"/>
+<fullyQualifiedTypeName name="net.bytebuddy.implementation.bytecode.assign.Assigner.EqualTypesOnly"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.Task"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.EventualConsequence"/>
+<fullyQualifiedTypeName name="practicaCompra.tasks.SeeThat"/>
+<fullyQualifiedTypeName name="org.hamcrest.object.HasToString"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.Question"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.questions.Text"/>
+<fullyQualifiedTypeName name="practicaCompra.userInterfaces.PaginaSummaryShoppingPage"/>
+<fullyQualifiedTypeName name="practicaCompra.questions.CompraRealizada"/>
+<fullyQualifiedTypeName name="practicaCompra.utils.Constant"/>
+<fullyQualifiedTypeName name="net.thucydides.core.annotations.Step"/>
+</qualifiedTypeNameHistroy>

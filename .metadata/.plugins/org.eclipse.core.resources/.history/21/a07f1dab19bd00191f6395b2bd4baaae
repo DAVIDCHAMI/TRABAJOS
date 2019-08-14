@@ -1,0 +1,27 @@
+package practica.stepdefinitions;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class RealizarCompraDeUnProductoStepDefinitions {
+	
+	
+	@Given("^david logged en app whith (.*) and (.*)$")
+	public void davidLoggedEnAppWhithAnd(String arg1, String arg2) throws Exception {
+	  
+	}
+
+
+	@When("^makes a buy$")
+	public void makesABuy() throws Exception {
+	   
+	}
+
+	@Then("^david see the purchase done\\.$")
+	public void davidSeeThePurchaseDone() throws Exception {
+	   
+	}
+
+
+}

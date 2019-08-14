@@ -1,0 +1,62 @@
+package practica.stepdefinitions;
+
+import static org.hamcrest.Matchers.hasItems;
+import static org.hamcrest.Matchers.equalTo;
+import static net.serenitybdd.screenplay.GivenWhenThen.*;
+import static org.junit.Assert.assertThat;
+
+import org.openqa.selenium.WebDriver;
+
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+
+import net.serenitybdd.screenplay.Actor;
+
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import net.thucydides.core.annotations.Managed;
+import practicaCompra.tasks.OpenTheBrowser;
+import practicaCompra.questions.CompraRealizada;
+import practicaCompra.tasks.LoggedInApp;
+import practicaCompra.tasks.MakesBuy;
+import practicaCompra.userInterfaces.HomePage;
+import practicaCompra.utils.Constant;
+
+
+
+public class RealizarCompraDeUnProductoStepDefinitions {
+	
+	HomePage homepage;
+	
+	@Managed()
+	public  WebDriver hisBrowser;
+	
+	private Actor david = Actor.named("David");
+	
+	@Before
+	public void setUp() {
+		david.can(BrowseTheWeb.with(hisBrowser));
+	}
+	
+	@Given("^david logged en app whith \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void davidLoggedEnAppWhithAnd(String user, String pass) throws Exception {
+		david.wasAbleTo(OpenTheBrowser.on(homepage));
+	    david.wasAbleTo(LoggedInApp.Whith(user,pass));
+	}
+
+	@When("^makes a buy$")
+	public void makesABuy() throws Exception {
+		david.attemptsTo(MakesBuy.producto(hisBrowser));
+		
+	   
+	}
+
+	@Then("^david see the purchase done\\.$")
+	public void davidSeeThePurchaseDone() throws Exception {	
+		//david.should(seeThat(CompraRealizada.value(Constant.MSG_BUY_MADE_CORRECT), hasItems("Your order on My Store is complete.")));
+		david.should(
+				seeThat("Mensaje de confirmación de compra",CompraRealizada.value(), equalTo(Constant.MSG_BUY_MADE_CORRECT)));	
+	}
+}
