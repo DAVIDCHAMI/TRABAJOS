@@ -3,9 +3,8 @@
 Feature: Buy a product
 
 As a user logged in app
-I want buy a product
+I want buy a products
 to see the purchase done
-
 
  Scenario Outline: do buy product
     Given david logged en app whith <user> and <pass>
@@ -15,7 +14,6 @@ to see the purchase done
     |user                      |pass    |
     |"chamirojo.16@hotmail.es" |"123456"|
     
-   
 
 Scenario Outline: asks for a receipt
  Given david logged whith <user> and <pass>
