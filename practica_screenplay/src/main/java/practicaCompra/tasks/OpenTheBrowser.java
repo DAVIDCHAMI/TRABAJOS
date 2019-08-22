@@ -9,24 +9,24 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.annotations.Step;
 import practicaCompra.userInterfaces.HomePage;
 
-public class OpenTheBrowser  implements Task{
-	
-	private PageObject 	homepage;
-	
-	public OpenTheBrowser(PageObject homepage) {
-		this.homepage = homepage;
-	}
+public class OpenTheBrowser implements Task {
 
-	@Override
-	@Step("{0} opens browser on page  automaticepractice")
-	public <T extends Actor> void performAs(T actor) {
-		actor.attemptsTo(Open.browserOn(homepage));
-		
-	}
+    private PageObject homepage;
 
-	public static OpenTheBrowser on(HomePage homepage) {
-		return instrumented(OpenTheBrowser.class, homepage);
-	}
-	
+    public OpenTheBrowser(PageObject homepage) {
+        this.homepage = homepage;
+    }
+
+    @Override
+    @Step("{0} opens browser on page  automaticepractice")
+    public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(Open.browserOn(homepage));
+
+    }
+
+    public static OpenTheBrowser on(HomePage homepage) {
+        return instrumented(OpenTheBrowser.class, homepage);
+    }
+
 
 }

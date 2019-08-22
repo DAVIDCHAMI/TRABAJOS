@@ -11,6 +11,5 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 glue="practica.stepdefinitions",
 snippets =SnippetType.CAMELCASE)
 public class PracticaRunner{
-	 
 
 }

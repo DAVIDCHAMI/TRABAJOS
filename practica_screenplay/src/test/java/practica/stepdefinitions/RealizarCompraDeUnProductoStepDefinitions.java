@@ -26,53 +26,51 @@ import practicaCompra.utils.Constant;
 
 public class RealizarCompraDeUnProductoStepDefinitions {
 
-	HomePage homepage;
+    HomePage homepage;
 
-	@Managed()
-	public WebDriver hisBrowser;
+    @Managed()
+    public WebDriver hisBrowser;
 
-	private Actor david = Actor.named("David");
+    private Actor david = Actor.named("David");
 
-	@Before
-	public void setUp() {
-		david.can(BrowseTheWeb.with(hisBrowser));
-	}
+    @Before
+    public void setUp() {
+        david.can(BrowseTheWeb.with(hisBrowser));
+    }
 
-	@Given("^david logged en app whith \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void davidLoggedEnAppWhithAnd(String user, String pass) throws Exception {
-		david.wasAbleTo(OpenTheBrowser.on(homepage));
-		david.wasAbleTo(LoggedInApp.Whith(user, pass));
-	}
+    @Given("^david logged en app whith \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void davidLoggedEnAppWhithAnd(String user, String pass) throws Exception {
+        david.wasAbleTo(OpenTheBrowser.on(homepage));
+        david.wasAbleTo(LoggedInApp.Whith(user, pass));
+    }
 
-	@When("^makes a buy$")
-	public void makesABuy() throws Exception {
-		david.attemptsTo(MakesBuy.producto(hisBrowser));
+    @When("^makes a buy$")
+    public void makesABuy() throws Exception {
+        david.attemptsTo(MakesBuy.producto(hisBrowser));
+    }
 
-	}
+    @Then("^david see the purchase done\\.$")
+    public void davidSeeThePurchaseDone() throws Exception {
+        // david.should(seeThat(CompraRealizada.value(Constant.MSG_BUY_MADE_CORRECT),
+        // hasItems("Your order on My Store is complete.")));
+        david.should(seeThat("Mensaje de confirmación de compra", CompraRealizada.value(PaginaSummaryShoppingPage.MSG_PURCHASE_MADE),
+                equalTo(Constant.MSG_BUY_MADE_CORRECT)));
+    }
 
-	@Then("^david see the purchase done\\.$")
-	public void davidSeeThePurchaseDone() throws Exception {
-		// david.should(seeThat(CompraRealizada.value(Constant.MSG_BUY_MADE_CORRECT),
-		// hasItems("Your order on My Store is complete.")));
-		david.should(seeThat("Mensaje de confirmación de compra", CompraRealizada.value(PaginaSummaryShoppingPage.MSG_PURCHASE_MADE),
-				equalTo(Constant.MSG_BUY_MADE_CORRECT)));
-	}
+    @Given("^david logged whith \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void davidLoggedWhithAnd(String user, String pass) throws Exception {
+        david.wasAbleTo(OpenTheBrowser.on(homepage));
+        david.wasAbleTo(LoggedInApp.Whith(user, pass));
+    }
 
-	@Given("^david logged whith \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void davidLoggedWhithAnd(String user, String pass) throws Exception {
-		david.wasAbleTo(OpenTheBrowser.on(homepage));
-		david.wasAbleTo(LoggedInApp.Whith(user, pass));
-	}
+    @When("^david makes buy the:$")
+    public void davidMakesBuyTheFadedShortSleeveTShirtsBlouse(List<Map<String, String>> product) throws Exception {
+        david.attemptsTo(MakesBuys.productos(hisBrowser));
+        System.out.println("productos for buy" + product);
+    }
 
-	@When("^david makes buy the:$")
-	public void davidMakesBuyTheFadedShortSleeveTShirtsBlouse(List<Map<String, String>> product) throws Exception {
-		david.attemptsTo(MakesBuys.productos(hisBrowser));
-		System.out.println("productos for buy" + product);
-	}
-
-	@Then("^should see the values the: \"([^\"]*)\"$")
-	public void shouldSeeTheValuesThe(String arg1) throws Exception {
+    @Then("^should see the values the: \"([^\"]*)\"$")
+    public void shouldSeeTheValuesThe(String arg1) throws Exception {
         david.should(seeThat("Valor a pagar por la compra", CompraRealizada.value(PaginaSummaryShoppingPage.MSG_VALUE_BUY), equalTo(Constant.MSG_BUY_CORRECT)));
-	}
-
+    }
 }
