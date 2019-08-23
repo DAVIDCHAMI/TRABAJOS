@@ -34,7 +34,6 @@ public class Confirm implements Task {
          */
 
         actor.attemptsTo(Payment.payByCheck());
-
         ConexionBD conexionBD = new ConexionBD();
         conexionBD.conectar();
     }
