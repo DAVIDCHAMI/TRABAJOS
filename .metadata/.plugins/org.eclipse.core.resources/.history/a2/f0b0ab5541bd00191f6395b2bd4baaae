@@ -1,0 +1,15 @@
+#Author: your.email@your.domain.com
+
+Feature: Buy a product
+
+As a user logged in app
+I want buy a product
+to see the purchase done
+
+
+  Scenario: Title of your scenario
+    Given david logged en app whith <chamirojo.16@hotmail.es> and <123456>
+    When  makes a buy
+    Then david see the purchase done.
+    
+   

@@ -1,0 +1,21 @@
+#Author: your.email@your.domain.com
+
+Feature: Buy a product
+
+As a user logged in app
+I want buy a product
+to see the purchase done
+
+
+ Scenario Outline: Title of your scenario
+    Given david logged en app whith <user> and <pass>
+    When  makes a buy the:Faded Short Sleeve T-shirts
+    Then david see the purchase done.
+    And should see 
+    
+
+   Examples: 
+    |user                      |pass    |
+    |"chamirojo.16@hotmail.es" |"123456"|
+   
+

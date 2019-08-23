@@ -1,0 +1,6 @@
+serenity.project.name= Compra de productos
+serenity.test.root=starter
+
+webdriver.driver=chrome
+drivers.windows.webdriver.chrome.driver=src/test/resources/webdriver/chromedriver.exe
+serenity.browser.maximized = true

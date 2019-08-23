@@ -1,0 +1,21 @@
+package practicaCompra.questions;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.questions.Text;
+import net.serenitybdd.screenplay.targets.Target;
+import practicaCompra.userInterfaces.PaginaSummaryShoppingPage;
+
+public class CompraRealizada implements Question<String>{
+
+	@Override
+	public String answeredBy(Actor actor) {
+		return Text.of(PaginaSummaryShoppingPage.MSG_PURCHASE_MADE).viewedBy(actor).asString();
+	}
+
+	public static Question<String> value(Target msgPurchaseMade) {
+		// TODO Auto-generated method stub
+		return new CompraRealizada();
+	}
+
+}

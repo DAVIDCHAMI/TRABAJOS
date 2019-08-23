@@ -1,0 +1,19 @@
+package practicaCompra.questions;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.questions.Text;
+import practicaCompra.userInterfaces.PaginaSummaryShoppingPage;
+
+public class CompraRealizada{
+
+	public static Question<String> value() {
+		
+		return actor -> Text.of(PaginaSummaryShoppingPage.) ;
+	}
+	
+
+	
+
+}

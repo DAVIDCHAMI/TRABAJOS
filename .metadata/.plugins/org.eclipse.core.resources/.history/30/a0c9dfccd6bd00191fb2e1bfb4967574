@@ -1,0 +1,19 @@
+package practicaCompra.userInterfaces;
+
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.screenplay.targets.Target;
+
+public class PaginaPrincipalPage  extends PageObject{
+	////a[@title='T-shirts'][@xpath='1']"
+	
+	public static final Target BTN_SHIRTS= Target.the("shirt botton").locatedBy("body.index.hide-left-column.hide-right-column.lang_en:nth-child(2) div.header-container div.container div.row div.sf-contener.clearfix.col-lg-12:nth-child(6) ul.sf-menu.clearfix.menu-content.sf-js-enabled.sf-arrows > li:nth-child(3)");
+	public static final Target IMG_SHIRTS= Target.the("Img botton").locatedBy("//div[@class='product-image-container']");
+	public static final Target ADD_SHIRTS_CART= Target.the("Img botton").locatedBy("//a[@class='button ajax_add_to_cart_button btn btn-default']");
+	
+	
+	
+	
+	
+	
+	
+}

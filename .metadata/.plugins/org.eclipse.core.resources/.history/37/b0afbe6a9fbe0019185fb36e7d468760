@@ -1,0 +1,23 @@
+package practicaCompra.tasks;
+
+import static net.serenitybdd.screenplay.Tasks.instrumented;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Click;
+import practicaCompra.userInterfaces.PaginaSummaryShoppingPage;
+
+public class ConfirmOrder implements Task{
+
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(Click.on(PaginaSummaryShoppingPage.BTN_CONFIRM_ORDER));
+		
+	}
+
+	public static ConfirmOrder whithSummary() {
+		// TODO Auto-generated method stub
+		return instrumented(ConfirmOrder.class);
+	}
+
+}

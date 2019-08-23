@@ -1,0 +1,27 @@
+package practicaCompra.tasks;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Performable;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Click;
+import practicaCompra.userInterfaces.PaginaSummaryShoppingPage;
+
+import  static net.serenitybdd.screenplay.Tasks.instrumented;
+
+public class Confirm implements Task{
+
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(Click.on(PaginaSummaryShoppingPage.BTN_PROCEED_CHECKOUT),
+				Click.on(PaginaSummaryShoppingPage.BTN_PROCEED_CHECKOUT_ADDRESSES),
+				Click.on(PaginaSummaryShoppingPage.CHECK_TERMS),
+				Click.on(PaginaSummaryShoppingPage.BTN_PROCEED_SHIPPING_));
+		
+		actor.attemptsTo(Payment.payByCheck());
+	}
+
+	public static Confirm shoppingCartSummary() {
+	return	instrumented(Confirm.class);
+	}
+
+}

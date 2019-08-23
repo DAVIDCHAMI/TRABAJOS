@@ -1,0 +1,9 @@
+package practicaCompra.userInterfaces;
+
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.screenplay.targets.Target;
+
+public class PaginaPrincipalPage  extends PageObject{
+	
+	public static final Target
+}

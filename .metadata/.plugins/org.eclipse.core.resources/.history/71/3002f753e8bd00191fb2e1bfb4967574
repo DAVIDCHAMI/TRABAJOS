@@ -1,0 +1,55 @@
+package practicaCompra.tasks;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Performable;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.selectactions.SelectByIndexFromTarget;
+import net.serenitybdd.screenplay.questions.JavaScript;
+import practica.stepdefinitions.RealizarCompraDeUnProductoStepDefinitions;
+import practicaCompra.userInterfaces.PaginaPrincipalPage;
+
+import static  net.serenitybdd.screenplay.Tasks.instrumented;
+
+import org.apache.pdfbox.contentstream.operator.graphics.MoveTo;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.MoveMouseAction;
+import org.openqa.selenium.interactions.touch.MoveAction;
+import org.openqa.selenium.remote.server.handler.interactions.touch.Move;
+
+import com.gargoylesoftware.htmlunit.javascript.configuration.JavaScriptConfiguration;
+import com.opera.core.systems.scope.protos.ExecProtos.ActionList.Action;
+
+public class MakesBuy implements Task{
+	
+	WebDriver hisBrowser;
+	
+	
+
+	public MakesBuy(WebDriver hisBrowser) {
+		this.hisBrowser = hisBrowser;
+	}
+
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(Click.on(PaginaPrincipalPage.BTN_WOMEN));	
+	   ((JavascriptExecutor)hisBrowser).executeScript("arguments[0].click()",hisBrowser.findElement(By.xpath(PaginaPrincipalPage.ADD_SHIRTS_CART_WEB_ELEMENT)));
+	   actor.attemptsTo(Click.on(PaginaPrincipalPage.BTN_PROCCED_TO_CHECKOUT));
+	   
+	   actor.attemptsTo(Confirm.shoppingCartSummary());
+	}
+	
+	
+	
+
+	public static MakesBuy producto(WebDriver hisBrowser) {
+		return instrumented(MakesBuy.class, hisBrowser);
+	}
+	
+	
+	
+
+}

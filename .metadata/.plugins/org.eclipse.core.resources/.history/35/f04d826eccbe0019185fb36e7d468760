@@ -1,0 +1,23 @@
+package practicaCompra.tasks;
+
+import org.openqa.selenium.WebDriver;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Performable;
+import net.serenitybdd.screenplay.Task;
+import static net.serenitybdd.screenplay.Tasks.instrumented;
+
+public class MakesBuys implements Task {
+
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static Performable productos(WebDriver hisBrowser) {
+		
+		return instrumented(MakesBuys.class, hisBrowser);
+	}
+
+}

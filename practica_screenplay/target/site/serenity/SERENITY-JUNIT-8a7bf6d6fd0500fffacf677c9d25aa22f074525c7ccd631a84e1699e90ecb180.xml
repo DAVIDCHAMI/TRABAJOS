@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Buy a product" skipped="0" tests="2" time="90.56" timestamp="2019-08-22 02:26:43"><testcase name="do buy product"/><testcase name="asks for a receipt"/></testsuite>
