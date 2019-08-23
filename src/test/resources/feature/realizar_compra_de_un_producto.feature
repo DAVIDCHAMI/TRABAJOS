@@ -26,3 +26,12 @@ Feature: Buy a product
     Examples:
       | user                      | pass     |
       | "chamirojo.16@hotmail.es" | "123456" |
+
+@PRUEBA
+  Scenario Outline: do buy dress printed chiffon
+    Given david logged en app whith <user> and <pass>
+    When  makes a buy the dress
+    Then david see the purchase done.
+    Examples:
+      | user                      | pass     |
+      | "chamirojo.16@hotmail.es" | "123456" |

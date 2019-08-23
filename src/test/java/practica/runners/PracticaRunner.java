@@ -8,7 +8,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = "src/test/resources/feature/realizar_compra_de_un_producto.feature",
-glue="practica.stepdefinitions",
+glue="practica.stepdefinitions", tags = {"@PRUEBA"},
 snippets =SnippetType.CAMELCASE)
 public class PracticaRunner{
 

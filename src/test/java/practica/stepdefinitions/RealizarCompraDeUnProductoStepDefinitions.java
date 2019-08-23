@@ -6,6 +6,7 @@ import static org.hamcrest.Matchers.equalTo;
 import java.util.List;
 import java.util.Map;
 
+import cucumber.api.PendingException;
 import org.openqa.selenium.WebDriver;
 
 import cucumber.api.java.Before;
@@ -21,6 +22,7 @@ import practicaCompra.tasks.MakesBuy;
 import practicaCompra.tasks.MakesBuys;
 import practicaCompra.tasks.OpenTheBrowser;
 import practicaCompra.userInterfaces.HomePage;
+import practicaCompra.userInterfaces.PaginaPrincipalPage;
 import practicaCompra.userInterfaces.PaginaSummaryShoppingPage;
 import practicaCompra.utils.Constant;
 
@@ -46,14 +48,14 @@ public class RealizarCompraDeUnProductoStepDefinitions {
 
     @When("^makes a buy$")
     public void makesABuy() throws Exception {
-        david.attemptsTo(MakesBuy.producto(hisBrowser));
+        david.attemptsTo(MakesBuy.producto(PaginaPrincipalPage.ADD_SHIRTS_CART_WEB_ELEMENT));
     }
 
     @Then("^david see the purchase done\\.$")
     public void davidSeeThePurchaseDone() throws Exception {
         // david.should(seeThat(CompraRealizada.value(Constant.MSG_BUY_MADE_CORRECT),
         // hasItems("Your order on My Store is complete.")));
-        david.should(seeThat("Mensaje de confirmación de compra", CompraRealizada.value(PaginaSummaryShoppingPage.MSG_PURCHASE_MADE),
+        david.should(seeThat("Mensaje de confirmaciï¿½n de compra", CompraRealizada.value(PaginaSummaryShoppingPage.MSG_PURCHASE_MADE),
                 equalTo(Constant.MSG_BUY_MADE_CORRECT)));
     }
 
@@ -72,5 +74,10 @@ public class RealizarCompraDeUnProductoStepDefinitions {
     @Then("^should see the values the: \"([^\"]*)\"$")
     public void shouldSeeTheValuesThe(String arg1) throws Exception {
         david.should(seeThat("Valor a pagar por la compra", CompraRealizada.value(PaginaSummaryShoppingPage.MSG_VALUE_BUY), equalTo(Constant.MSG_BUY_CORRECT)));
+    }
+
+    @When("^makes a buy the dress$")
+    public void makesABuyTheDress() throws Throwable {
+        david.attemptsTo(MakesBuy.producto(PaginaPrincipalPage.ADD_SHIRTS_CART_WEB_ELEMENT_DRESS));
     }
 }

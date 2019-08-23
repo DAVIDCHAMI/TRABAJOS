@@ -18,19 +18,19 @@ import practicaCompra.userInterfaces.PaginaPrincipalPage;
 
 public class MakesBuy implements Task {
 
-    WebDriver hisBrowser;
+    String Ruta;
 
 
-    public MakesBuy(WebDriver hisBrowser) {
-        this.hisBrowser = hisBrowser;
+    public MakesBuy(String Ruta) {
+        this.Ruta = Ruta;
     }
 
     @Override
     @Step("{0} start the buy")
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(SelectBotton.whit(PaginaPrincipalPage.BTN_WOMEN), DoScroll.to(PaginaPrincipalPage.IMG_SHIRTS));
+        actor.attemptsTo(SelectBotton.whit(PaginaPrincipalPage.BTN_WOMEN), DoScroll.to(PaginaPrincipalPage.IMG_DRESS));
         //((JavascriptExecutor)hisBrowser).executeScript("arguments[0].click()",hisBrowser.findElement(By.xpath(PaginaPrincipalPage.ADD_SHIRTS_CART_WEB_ELEMENT)));
-        WebElementFacade ADD_SHIRTS_CART = BrowseTheWeb.as(actor).findBy(PaginaPrincipalPage.ADD_SHIRTS_CART_WEB_ELEMENT);
+        WebElementFacade ADD_SHIRTS_CART = BrowseTheWeb.as(actor).findBy(Ruta);
         actor.attemptsTo(SelectBottonWhitJavaScritps.in(ADD_SHIRTS_CART),
                 DoScroll.to(PaginaPrincipalPage.BTN_PROCCED_TO_CHECKOUT),
                 SelectBotton.whit(PaginaPrincipalPage.BTN_PROCCED_TO_CHECKOUT));
@@ -38,8 +38,8 @@ public class MakesBuy implements Task {
     }
 
 
-    public static MakesBuy producto(WebDriver hisBrowser) {
-        return instrumented(MakesBuy.class, hisBrowser);
+    public static MakesBuy producto(String Ruta) {
+        return instrumented(MakesBuy.class,Ruta);
     }
 
 

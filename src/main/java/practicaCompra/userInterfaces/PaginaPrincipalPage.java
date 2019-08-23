@@ -17,4 +17,7 @@ public class PaginaPrincipalPage extends PageObject {
     public static final Target CONTINUE_SHOPPING = Target.the("continue shopping").locatedBy("//a[@class='button-exclusive btn btn-default']");
     public static final Target BTN_PROCCED_TO_CHECKOUT = Target.the("checkout botton").locatedBy("//span[contains(text(),'Proceed to checkout')]");
 
+
+    public static final String ADD_SHIRTS_CART_WEB_ELEMENT_DRESS = "//a[@class='button ajax_add_to_cart_button btn btn-default'][@data-id-product='7']";
+    public static final Target IMG_DRESS = Target.the("Img botton").locatedBy("//div[@class='product-image-container']//a[@title='Printed Chiffon Dress']");
 }
