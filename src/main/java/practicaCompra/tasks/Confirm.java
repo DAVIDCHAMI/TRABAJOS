@@ -26,8 +26,6 @@ public class Confirm implements Task {
                 SelectBotton.whit(PaginaSummaryShoppingPage.CHECK_TERMS),
                 SelectBotton.whit(PaginaSummaryShoppingPage.BTN_PROCEED_SHIPPING_)
         );
-
-
         /**
          actor.attemptsTo(Scroll.to(PaginaSummaryShoppingPage.BTN_PROCEED_CHECKOUT),Click.on(PaginaSummaryShoppingPage.BTN_PROCEED_CHECKOUT),
          Scroll.to(PaginaSummaryShoppingPage.BTN_PROCEED_CHECKOUT_ADDRESSES),Click.on(PaginaSummaryShoppingPage.BTN_PROCEED_CHECKOUT_ADDRESSES),
@@ -44,5 +42,4 @@ public class Confirm implements Task {
     public static Confirm shoppingCartSummary() {
         return instrumented(Confirm.class);
     }
-
 }
