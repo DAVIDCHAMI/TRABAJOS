@@ -17,7 +17,6 @@ public class Confirm implements Task {
     @Override
     @Step("{0} confirm the buy")
     public <T extends Actor> void performAs(T actor) {
-
         actor.attemptsTo(DoScroll.to(PaginaSummaryShoppingPage.BTN_PROCEED_CHECKOUT),
                 SelectBotton.whit(PaginaSummaryShoppingPage.BTN_PROCEED_CHECKOUT),
                 DoScroll.to(PaginaSummaryShoppingPage.BTN_PROCEED_CHECKOUT_ADDRESSES),
