@@ -42,6 +42,11 @@ public class RealizarCompraDeUnProductoStepDefinitions {
     public void davidLoggedEnAppWhithAnd(String user, String pass) throws Exception {
         david.wasAbleTo(OpenTheBrowser.on(homepage));
         david.wasAbleTo(LoggedInApp.Whith(user, pass));
+
+        
+
+
+
     }
 
     @When("^makes a buy$")
@@ -53,7 +58,7 @@ public class RealizarCompraDeUnProductoStepDefinitions {
     public void davidSeeThePurchaseDone() throws Exception {
         // david.should(seeThat(CompraRealizada.value(Constant.MSG_BUY_MADE_CORRECT),
         // hasItems("Your order on My Store is complete.")));
-        david.should(seeThat("Mensaje de confirmación de compra", CompraRealizada.value(PaginaSummaryShoppingPage.MSG_PURCHASE_MADE),
+        david.should(seeThat("Mensaje de confirmaciï¿½n de compra", CompraRealizada.value(PaginaSummaryShoppingPage.MSG_PURCHASE_MADE),
                 equalTo(Constant.MSG_BUY_MADE_CORRECT)));
     }
 
