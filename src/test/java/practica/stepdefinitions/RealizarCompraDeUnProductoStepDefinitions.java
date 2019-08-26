@@ -43,9 +43,6 @@ public class RealizarCompraDeUnProductoStepDefinitions {
         david.wasAbleTo(OpenTheBrowser.on(homepage));
         david.wasAbleTo(LoggedInApp.Whith(user, pass));
 
-        
-
-
 
     }
 
