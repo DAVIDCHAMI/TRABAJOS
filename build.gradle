@@ -27,6 +27,7 @@ dependencies {
     compile 'net.serenity-bdd:serenity-cucumber:1.9.5'
     compile 'net.serenity-bdd:serenity-screenplay:1.9.9'
     compile 'net.serenity-bdd:serenity-screenplay-webdriver:1.9.9'
+    compile group: 'org.sonarqube', name: 'org.sonarqube.gradle.plugin', version: '2.8', ext: 'pom'
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.assertj:assertj-core:3.9.1'
